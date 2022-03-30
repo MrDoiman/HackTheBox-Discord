@@ -1,6 +1,6 @@
 from pypresence import Presence
 import time
-import re, sys, subprocess
+import re, sys, subprocess, os
 
 maquina = input("Machine name: ")
 
@@ -51,6 +51,9 @@ elif os_name == "Windows":
 else:
     print("Error: OS not recognized.")
     exit()
+    
+tmux = "tmux rename-window " + "\"" + maquina + " | " + ip_address + "\""
+os.system(tmux)
 
 RPC.update(state="Hacking The Box...", details="/dev/tcp/" + ip_address, large_image="htb", small_image=imagen, large_text="HTB: " + maquina, small_text=os_name, start=time.time())
 print("Discord Connection Success! (Don't end the script until the machine is finished)")
