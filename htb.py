@@ -2,6 +2,7 @@ from pypresence import Presence
 import time
 import re, sys, subprocess, os
 
+client_id = 'CLIENT_ID_GOES_HERE'
 maquina = input("Machine name: ")
 
 if len(sys.argv) != 2:
@@ -40,7 +41,6 @@ if __name__ == '__main__':
     os_name = get_os(ttl)
     print("%s (ttl -> %s): %s" % (ip_address, ttl, os_name))
 
-client_id = 'CLIENT_ID_GOES_HERE'
 RPC = Presence(client_id)
 RPC.connect()
 
