@@ -1,5 +1,5 @@
 # HackTheBox Discord
-This script sets a custom Discord Rich Presence with your HackTheBox Machine Loader, sets in which system you are (whether Windows/Linux) depending on the TTL, also changes your tmux window name following the next format "<Machine Name> | <Machine IP>".
+This script sets a custom Discord Rich Presence with your HackTheBox Machine Loader, sets in which system you are (whether Windows/Linux) depending on the TTL, also changes your tmux window name following the next format "Machine Name | Machine IP".
 
 # Installation
 
