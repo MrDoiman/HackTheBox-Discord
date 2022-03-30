@@ -11,7 +11,7 @@ if len(sys.argv) != 2:
 
 def get_ttl(ip_address):
 
-    proc = subprocess.Popen(["/sbin/ping -c 1 %s" % ip_address, ""], stdout=subprocess.PIPE, shell=True)
+    proc = subprocess.Popen(["/usr/bin/ping -c 1 %s" % ip_address, ""], stdout=subprocess.PIPE, shell=True)
     (out,err) = proc.communicate()
 
     out = out.split()
